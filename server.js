@@ -20,7 +20,6 @@ app.use("/homepage_ourfeatures", ourfeatures);
 app.use("/homepage_ourprojects", ourprojects);
 app.use("/homepage_leadersvoice", leadersvoice);
 app.use("/homepage_parentsvoice", parentsvoice);
-app.use("/homepage_languages", languages);
 app.use("/homepage_newsletter", newsletter);
 app.use("/homepage_footer", footer);
 
