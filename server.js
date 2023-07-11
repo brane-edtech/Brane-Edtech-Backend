@@ -25,8 +25,8 @@ app.use("/homepage_languages", languages);
 app.use("/homepage_forbes", forbes);
 app.use("/homepage_footer", footer);
 
-app.listen(8080,()=>{
-    console.log("server listening port no.8080");
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`server listening port no.${process.env.PORT}`);
 });
 
 
