@@ -1,11 +1,11 @@
 const express = require("express");
 const braneClient = require("../../client/client");
-const child1 = express.Router();
+const banner = express.Router();
 
-child1.get("/", async (req, res)=>{
+banner.get("/", async (req, res)=>{
     try{
         await braneClient.connect();
-        let data = await braneClient.db("brane").collection("homepage_child1").find().toArray()
+        let data = await braneClient.db("brane").collection("homepage_banner").find().toArray()
         if(data.length === 0 || data.includes(null)){
             res.status(204).json({error:"Data Not Found"});
         }
@@ -16,4 +16,4 @@ child1.get("/", async (req, res)=>{
     }
 })
 
-module.exports = child1;
+module.exports = banner;
