@@ -11,6 +11,7 @@ const parentsvoice = require("./routes/homescreen/parentsvoice");
 const newsletter = require("./routes/homescreen/newsletter");
 const signup = require("./routes/signup/signup");
 const login = require("./routes/login/login");
+const mobileno_matching = require('./routes/login/mobileno_matching');
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use("/homepage_parentsvoice", parentsvoice);
 app.use("/homepage_newsletter", newsletter);
 app.use("/signup", signup);
 app.use("/login", login);
+app.use("/ismobileno_matched", mobileno_matching);
 
 app.listen(8080,()=>{
     console.log("server listening port no.8080");
