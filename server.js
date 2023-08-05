@@ -1,7 +1,7 @@
-const cors=require("cors");
-const express=require("express");
-const bodyParser = require("body-parser")
-const app=express();
+const cors = require("cors");
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
 const header = require("./routes/homescreen/header");
 const banner = require("./routes/homescreen/banner");
@@ -11,7 +11,10 @@ const parentsvoice = require("./routes/homescreen/parentsvoice");
 const newsletter = require("./routes/homescreen/newsletter");
 const signup = require("./routes/signup/signup");
 const login = require("./routes/login/login");
-const mobileno_matching = require('./routes/login/mobileno_matching');
+const mobileno_matching = require("./routes/login/mobileno_matching");
+const landingpagenavbar = require("./routes/landingscreen/landingpagenavbar");
+const landingpageleftmenu = require("./routes/landingscreen/landingpageleftmenu");
+const landingpagebody = require("./routes/landingscreen/landingpagebody");
 
 app.use(cors());
 app.use(express.json());
@@ -26,11 +29,10 @@ app.use("/homepage_newsletter", newsletter);
 app.use("/signup", signup);
 app.use("/login", login);
 app.use("/ismobileno_matched", mobileno_matching);
+app.use("/landingpage_navbar", landingpagenavbar);
+app.use("/landingpage_leftmenu", landingpageleftmenu);
+app.use("/landingpage_body", landingpagebody);
 
-app.listen(8080,()=>{
-    console.log("server listening port no.8080");
+app.listen(8080, () => {
+  console.log("server listening port no.8080");
 });
-
-
-
-
