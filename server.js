@@ -15,6 +15,7 @@ const mobileno_matching = require("./routes/login/mobileno_matching");
 const landingpagenavbar = require("./routes/landingscreen/landingpagenavbar");
 const landingpageleftmenu = require("./routes/landingscreen/landingpageleftmenu");
 const landingpagebody = require("./routes/landingscreen/landingpagebody");
+const signupdata = require('./routes/signup/signupdata');
 
 app.use(cors());
 app.use(express.json());
@@ -27,11 +28,13 @@ app.use("/homepage_leadersvoice", leadersvoice);
 app.use("/homepage_parentsvoice", parentsvoice);
 app.use("/homepage_newsletter", newsletter);
 app.use("/signup", signup);
+app.use("/signup_data",signupdata);
 app.use("/login", login);
 app.use("/ismobileno_matched", mobileno_matching);
 app.use("/landingpage_navbar", landingpagenavbar);
 app.use("/landingpage_leftmenu", landingpageleftmenu);
 app.use("/landingpage_body", landingpagebody);
+
 
 app.listen(8080, () => {
   console.log("server listening port no.8080");
